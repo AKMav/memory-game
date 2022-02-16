@@ -29,7 +29,9 @@ body {
 	font-family:Arial, Helvetica, sans-serif;
 	color: #EEEEEE;
 	font-weight: bold;
-	font-size: 26px;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 60px;
 }
 
 .main {
@@ -39,7 +41,7 @@ body {
 }
 
 .main__game-body {
-	width: 800px;
+	width: 900px;
 	height: 800px;
 	margin: 0;
 	display: flex;
@@ -50,13 +52,15 @@ body {
 }
 
 .main__card-body {
-	width: calc(20% - 10px);
-	height: calc(25% - 10px);
-	margin: 5px;
+	width: 20%;
+	height: 25%;
 	position: relative;
 	transform: scale(1);
 	transform-style: preserve-3d;
 	transition: transform 0.3s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .main__card-body:active {
@@ -71,10 +75,11 @@ body {
 
 .main__card-face,
 .main__card-cover {
-	width: 95%;
-	height: 95%;
+	width: 90%;
+	height: 85%;
 	position: absolute;
 	border-radius: 5px;
+	cursor: pointer;
 	backface-visibility: hidden;
 }
 
@@ -91,7 +96,6 @@ body {
 
 .footer__row {
 	height: 100%;
-	max-width: 1440px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -132,14 +136,19 @@ body {
 
 @media (max-width: 800px) {
 	.main__game-body {
-		width: 560px;
+		width: 620px;
 		height: 620px;
 	}
 }
 
 @media (max-width: 510px) {
 	.main__game-body {
-		width: 450px;
-		height: 500px;
+		width: 550px;
+		height: 550px;
+	}
+
+	.main__card-body {
+		width: 20%;
+		height: 20%;
 	}
 }
