@@ -6,15 +6,22 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./style.css">
+	<link rel="shortcut icon" href="./sources/icons/favicon.ico" type="image/x-icon">
 	<title>Memory game by Akm</title>
 </head>
 
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<span class="header__text">Memory game</span>
+			<span class="header__text">Найди одинаковые карточки</span>
+			<button class="header__show-table">Таблица рекордов</button>
 		</header>
 		<main class="main">
+			<div class="table hdn">
+				<span class="col-1 col">Количество ходов</span>
+				<span class="col-2 col">Имя игрока</span>
+				<span class="col-3 col">Время игры</span>
+			</div>
 			<div class="main__game-body">
 				<div class="main__card-body" data-hero="deadpool">
 					<img class="main__card-face" alt="Рубашка карты" src="./sources/images/card1.jpg">
