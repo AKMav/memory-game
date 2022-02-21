@@ -38,20 +38,18 @@ document.querySelector('.wrapper').append(inputContainer);
 inputContainer.append(inputHeader);
 inputContainer.append(inputUserName);
 inputUserName.focus();
-inputUserName.addEventListener('keyup', hasName);
+inputUserName.addEventListener('change', hasName);
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 btnTable.addEventListener('click', getTable);
 btnTable.addEventListener('click', showTable);
 
-function hasName(event) {
-	if (event.code === 'Enter') {
-		if (inputUserName.value) {
-			gameData.user = inputUserName.value;
-			inputContainer.remove();
-		} else {
-			inputHeader.innerText = 'Нет имени - нет игры!';
-		}
+function hasName() {
+	if (inputUserName.value) {
+		gameData.user = inputUserName.value;
+		inputContainer.remove();
+	} else {
+		inputHeader.innerText = 'Нет имени - нет игры!';
 	}
 }
 
@@ -169,7 +167,6 @@ function setLocalStorage() {
 }
 
 function getTable() {
-	console.log(gameData.gameNumber)
 	columns.forEach(elem => {
 		elem.innerText = '';
 	})
