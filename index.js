@@ -96,6 +96,7 @@ function isWin() {
 			if (gameData.gameNumber < 10) {
 				setLocalStorage();
 				unflipBoard();
+				showScore();
 				gameData.score = 0;
 				gameData.gameNumber++;
 			} else {
@@ -106,6 +107,18 @@ function isWin() {
 			}
 		}, 1000)
 	}
+}
+
+function showScore() {
+	const scoreLine = document.createElement('div');
+	scoreLine.classList.add('total-score');
+	scoreLine.title = 'Закрыть';
+	scoreLine.innerHTML = 'Поздравляю с победой!<br>Сделано ходов -' + gameData.score;
+	document.querySelector('.main__game-body').append(scoreLine);
+	console.log(scoreLine);
+	scoreLine.addEventListener('click', () => {
+		scoreLine.remove();
+	})
 }
 
 function checkMatch() {
@@ -185,5 +198,4 @@ function showTable() {
 	}
 }
 
-
-// letRandom();
+letRandom();

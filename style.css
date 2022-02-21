@@ -127,6 +127,25 @@ body {
 	display: none;
 }
 
+.total-score {
+	width: 250px;
+	height: 90px;
+	text-align: center;
+	font-size: 18px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-color: #7882A4;
+	color: #EEEEEE;
+	position: absolute;
+	top: calc(50% - 75px);
+	right: calc(50% - 125px);
+	border-radius: 10px;
+	border: 2px solid #EEEEEE;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
 .col {
 	display: block;
 	width: 33.333%;
@@ -144,7 +163,6 @@ body {
 	font-weight: 800;
 	width: 100%;
 }
-
 
 .main__card-body {
 	width: 20%;
